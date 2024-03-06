@@ -6,7 +6,7 @@
   $: ({ title, slug, published } = meta)
 </script>
 
-<a href={slug}>
+<a href='/'>
   <h2>
     {title}
   </h2>

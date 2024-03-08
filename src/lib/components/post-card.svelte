@@ -1,17 +1,20 @@
 <script lang="ts">
+  import { base } from "$app/paths"
   import Pointer from "$lib/components/icons/pointer.svelte"
-  import type { Meta } from "$lib/extract-markdown"
+  import type { Meta } from "$lib/extract"
 
   export let meta: Meta
   $: ({ title, slug, published } = meta)
 </script>
 
-<a href='/'>
+<a href="{base}/{slug}">
   <h2>
     {title}
   </h2>
   <div class="right">
-    <p>{published.date}</p>
+    <div class="date">
+      {published.date}
+    </div>
     <Pointer />
   </div>
 </a>
@@ -24,23 +27,21 @@
     vertical-align: baseline;
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid var(--border);
     animation: reveal 0.8s cubic-bezier(0.5, -0.2, 0.1, 1.2) forwards;
     padding: 1rem 0;
-  }
-
-  a:hover {
-    border-bottom: 1px solid var(--accent-border);
+    border-bottom: 1px solid var(--white);
   }
 
   h2 {
-    font-weight: 500;
-    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.25rem;
     transition: all 0.2s ease-in-out;
     display: flex;
     align-items: center;
     position: relative;
-    margin:0;
+    margin: 0;
+    color: var(--blue);
   }
 
   .right {
@@ -59,12 +60,12 @@
     transform: translateX(0);
   }
 
-  .right p {
-    margin:0;
-    opacity: 0.7;
+  .right .date {
+    margin: 0;
     height: 100%;
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    display: flex;
+    align-items: center;
     position: relative;
   }
 </style>

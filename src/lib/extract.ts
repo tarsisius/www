@@ -38,11 +38,11 @@ export function getAllMeta(): Meta[] {
       title: metaData.match(/^title: (.*)/m)?.[1]!,
       slug: path.split("/")[2],
       published: {
-        date: publishedMatch![1].split("/")[0],
+        date: publishedMatch![1].split("/")[0].replaceAll("-", "/"),
         time: publishedMatch![1].split("/")[1],
       },
       updated: {
-        date: updatedMatch![1].split("/")[0],
+        date: updatedMatch![1].split("/")[0].replaceAll("-", "/"),
         time: updatedMatch![1].split("/")[1],
       },
     })

@@ -5,9 +5,9 @@
   \_$$  _|  $$  __$$\ $$  __$$\     
     $$ |    $$ |  $$ |$$ /  $$ |    
     $$ |$$\ $$ |  $$ |$$ |  $$ |    
-    \$$$$  |$$ |  $$ |$$$$$$$  |$$\ 
-     \____/ \__|  \__|$$  ____/ \__|
-                      $$ | <small>my.id</small>          
+    \$$$$  |$$ |  $$ |$$$$$$$  |    
+     \____/ \__|  \__|$$  ____/     
+                      $$ | <small>.my.id</small>  
                       $$ |          
                       \__|           </pre>
 
@@ -16,8 +16,8 @@
     margin: 0;
     text-decoration: none;
     font-size: 0.5rem;
-    font-weight: 900;
     padding: 0;
+    line-height: 0.5rem;
   }
   .title small {
     font-size: .6rem;

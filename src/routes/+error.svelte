@@ -32,6 +32,12 @@ $$$$$$$$ |$$\$$\$$ |$$$$$$$$ |
     gap: 1rem;
     height: 100vh;
     justify-content: center;
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    @media (min-width: 32rem) {
+      padding: 0 2rem;
+    }
   }
 
   .top {
@@ -50,7 +56,7 @@ $$$$$$$$ |$$\$$\$$ |$$$$$$$$ |
     margin: 0;
     text-decoration: none;
     font-size: 0.5rem;
-    font-weight: 900;
     padding: 0;
+    line-height: 0.5rem;
   }
 </style>

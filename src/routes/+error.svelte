@@ -1,6 +1,5 @@
 <script>
   import { base } from "$app/paths"
-  import Undo from "$lib/components/icons/undo.svelte"
 </script>
 
 <svelte:head>
@@ -10,7 +9,6 @@
 
 <div class="error">
   <div class="top">
-    <Undo />
     <a href="{base}/">back to list</a>
   </div>
   <pre>

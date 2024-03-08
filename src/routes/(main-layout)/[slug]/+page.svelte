@@ -1,6 +1,5 @@
 <script lang="ts">
   import { base } from "$app/paths"
-  import Undo from "$lib/components/icons/undo.svelte"
   import type { PageData } from "./$types"
 
   export let data: PageData
@@ -13,7 +12,6 @@
 
 <article>
   <div class="top">
-    <Undo />
     <a href="{base}/">back to list</a>
   </div>
   <h1 class="title">{data.post.meta.title}</h1>

@@ -5,7 +5,7 @@
 <style>
   :global(:root) {
     --blue: #10a0a0;
-    --black: #212121;
+    --black: #040304;
     --white: #f8f8f8;
   }
 

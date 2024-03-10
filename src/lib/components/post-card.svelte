@@ -33,7 +33,7 @@
   }
 
   h2 {
-    font-weight: 700;
+    font-weight: 600;
     text-transform: capitalize;
     font-size: 1.25rem;
     transition: all 0.2s ease-in-out;

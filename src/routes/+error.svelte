@@ -56,5 +56,6 @@ $$$$$$$$ |$$\$$\$$ |$$$$$$$$ |
     font-size: 0.5rem;
     padding: 0;
     line-height: 0.5rem;
+    font-weight: 700;
   }
 </style>

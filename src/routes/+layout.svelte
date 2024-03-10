@@ -3,25 +3,6 @@
 </main>
 
 <style>
-  @font-face {
-    font-family: "JetBrainsMono";
-    src: url("$lib/assets/fonts/JetBrainsMono-Regular.ttf");
-    font-weight: 400;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "JetBrainsMono";
-    src: url("$lib/assets/fonts/JetBrainsMono-SemiBold.ttf");
-    font-weight: 600;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "JetBrainsMono";
-    src: url("$lib/assets/fonts/JetBrainsMono-Bold.ttf");
-    font-weight: 700;
-    font-display: swap;
-  }
-
   :global(:root) {
     --blue: #10a0a0;
     --black: #040304;
@@ -29,6 +10,25 @@
   }
 
   :global(body) {
+    @font-face {
+      font-family: "JetBrainsMono";
+      src: url("$lib/assets/fonts/JetBrainsMono-Regular.ttf");
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "JetBrainsMono";
+      src: url("$lib/assets/fonts/JetBrainsMono-SemiBold.ttf");
+      font-weight: 600;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "JetBrainsMono";
+      src: url("$lib/assets/fonts/JetBrainsMono-Bold.ttf");
+      font-weight: 700;
+      font-display: swap;
+    }
+
     font-family: "JetBrains Mono", sans-serif;
     font-weight: 400;
     color: var(--white);

@@ -22,7 +22,7 @@
   }
 
   :global(p) {
-    line-height: 1.6rem;
+    line-height: 1.8rem;
   }
 
   @keyframes -global-reveal {

@@ -7,7 +7,7 @@
 </main>
 
 <style>
-  :global() {
+  :global(html) {
     /* latin-ext */
 @font-face {
   font-family: "JetBrains Mono";

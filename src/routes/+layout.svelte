@@ -9,7 +9,7 @@
     --white: #f8f8f8;
   }
 
-  :global(body) {
+  :global() {
     @font-face {
       font-family: "JetBrainsMono";
       src: url("$lib/assets/fonts/JetBrainsMono-Regular.ttf");
@@ -28,7 +28,9 @@
       font-weight: 700;
       font-display: swap;
     }
+  }
 
+  :global(body) {
     font-family: "JetBrains Mono", sans-serif;
     font-weight: 400;
     color: var(--white);

@@ -37,7 +37,10 @@ export function getAllMeta(): Meta[] {
     const slug = path.split("/")[2]
 
     meta.push({
-      title: slug.replace(/\b\w/g, (match) => match.toUpperCase()),
+      title: slug
+        .replace(/\b\w/g, (match) => match.toUpperCase())
+        .split("-")
+        .join(" "),
       slug,
       published: {
         date: publishedMatch![1].split("/")[0].replaceAll("-", "/"),
@@ -50,7 +53,12 @@ export function getAllMeta(): Meta[] {
     })
   }
 
-  return meta
+  return meta.sort((a, b) => {
+    return (
+      new Date(b.published.date + " " + b.published.time).getTime() -
+      new Date(a.published.date + " " + a.published.time).getTime()
+    )
+  })
 }
 
 export function getMetaBySlug(slug: string): Meta {

@@ -1,5 +1,5 @@
 published: 2024-03-10/13:47
-updated: 2024-03-03/13:47
+updated: 2024-03-03/14:47
 @@@
 
 Ya betul, waktu terasa cepat sekali berjalan. 
@@ -15,4 +15,4 @@ Ya, itu sederet kekesalan saya di masa sekarang. Tapi melihat banyak kesempatan 
 # Beruntung Berada Dalam Keluarga
 Beruntung saya dilahirkan dalam keluarga yang menjadikan agama sebagai pedoman hidup (walaupun saya bukan pemeluk agama yang baik wkwk). Mungkin jika saya dilahirkan dalam lingkungan keluarga yang berbeda, entah bagaimana lebih beratnya hidup saya sekarang.
 
-Semoga semakin banyak hari-hari baik selanjutnya di hidup saya.
+Semoga semakin banyak hari-hari baik selanjutnya di hidup saya. Saya nulis ini sambil lihat reply live Windah Basudara :)

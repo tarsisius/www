@@ -29,7 +29,6 @@
     text-decoration: none;
     animation: reveal 0.8s cubic-bezier(0.5, -0.2, 0.1, 1.2) forwards;
     padding: 1rem 0;
-    border-bottom: 1px solid var(--white);
   }
 
   h2 {

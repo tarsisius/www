@@ -18,7 +18,11 @@
     font-weight: 400;
     color: var(--white);
     background-color: var(--black);
-    font-size: 14px;
+    font-size: 12pt;
+  }
+
+  :global(p) {
+    line-height: 1.6rem;
   }
 
   @keyframes -global-reveal {

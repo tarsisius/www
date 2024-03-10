@@ -3,7 +3,9 @@
 </script>
 
 <header>
-  <AsciiLogo />
+  <figure>
+    <AsciiLogo />
+  </figure>
 </header>
 
 <style>
@@ -18,5 +20,10 @@
     @media (min-width: 42rem) {
       padding: 2rem 2rem;
     }
+  }
+  
+  header figure {
+    margin: 0;
+    padding: 0;
   }
 </style>

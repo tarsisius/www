@@ -1,10 +1,10 @@
 <script lang="ts">
-  import AsciiLogo from "$lib/components/ascii-logo.svelte"
+  import ThreeDScene from "$lib/components/3d/scene.svelte"
 </script>
 
 <header>
   <figure>
-    <AsciiLogo />
+    <ThreeDScene />
   </figure>
 </header>
 
@@ -21,7 +21,7 @@
       padding: 2rem 2rem;
     }
   }
-  
+
   header figure {
     margin: 0;
     padding: 0;

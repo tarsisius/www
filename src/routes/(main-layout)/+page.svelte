@@ -10,11 +10,11 @@
   <meta name="description" content="It's my life logging" />
 </svelte:head>
 
-<article>
-  {#each data.meta as meta}
-    <PostCard {meta} />
-  {/each}
-</article>
+  <article>
+    {#each data.meta as meta}
+      <PostCard {meta} />
+    {/each}
+  </article>
 
 <style>
   article {

@@ -9,7 +9,7 @@
     --white: #f8f8f8;
   }
 
-  :global() {
+  :global(html) {
     @font-face {
       font-family: "JetBrainsMono";
       src: url("$lib/assets/fonts/JetBrainsMono-Regular.ttf");

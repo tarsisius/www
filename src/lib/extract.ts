@@ -34,9 +34,11 @@ export function getAllMeta(): Meta[] {
     const publishedMatch = metaData.match(/^published: (.*)/m)
     const updatedMatch = metaData.match(/^updated: (.*)/m)
 
+    const slug = path.split("/")[2]
+
     meta.push({
-      title: metaData.match(/^title: (.*)/m)?.[1]!,
-      slug: path.split("/")[2],
+      title: slug.replace(/\b\w/g, (match) => match.toUpperCase()),
+      slug,
       published: {
         date: publishedMatch![1].split("/")[0].replaceAll("-", "/"),
         time: publishedMatch![1].split("/")[1],

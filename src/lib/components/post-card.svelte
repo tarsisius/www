@@ -1,34 +1,43 @@
 <script lang="ts">
   import { base } from "$app/paths"
-  import Pointer from "$lib/components/icons/pointer.svelte"
+  import Date from "$lib/components/icons/date.svelte"
   import type { Meta } from "$lib/extract"
 
   export let meta: Meta
   $: ({ title, slug, published } = meta)
 </script>
 
-<a href="{base}/{slug}">
-  <h2>
-    {title}
-  </h2>
+<div class="card">
+  <a href="{base}/{slug}">
+    <h2>
+      {title}
+    </h2>
+  </a>
   <div class="right">
     <div class="date">
       {published.date}
     </div>
-    <Pointer />
+    <Date size={14}/>
   </div>
-</a>
+</div>
 
 <style>
-  a {
-    overflow: hidden;
+  .card {
     display: flex;
-    justify-content: space-between;
-    vertical-align: baseline;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    @media (min-width: 42rem) {
+      flex-direction: row;
+      justify-content: space-between;
+      vertical-align: baseline;
+      animation: reveal 0.8s cubic-bezier(0.5, -0.2, 0.1, 1.2) forwards;
+    }
+  }
+
+  .card a {
     color: inherit;
     text-decoration: none;
-    animation: reveal 0.8s cubic-bezier(0.5, -0.2, 0.1, 1.2) forwards;
-    padding: 1rem 0;
   }
 
   h2 {
@@ -48,15 +57,9 @@
     align-items: center;
     gap: 0.5rem;
     color: inherit;
-
     transition-timing-function: cubic-bezier(0.2, -0.25, 0, 1.6);
     transition-duration: 0.3s;
     transition-property: transform;
-    transform: translateX(1.5rem);
-  }
-
-  a:hover .right {
-    transform: translateX(0);
   }
 
   .right .date {

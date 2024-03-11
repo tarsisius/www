@@ -60,8 +60,8 @@
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
 
-    const renderPixelatedPass = new RenderPixelatedPass(2.25, scene, camera)
-    composer.addPass(renderPixelatedPass)
+    // const renderPixelatedPass = new RenderPixelatedPass(2.25, scene, camera)
+    // composer.addPass(renderPixelatedPass)
 
     const outputPass = new OutputPass()
     composer.addPass(outputPass)

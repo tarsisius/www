@@ -27,7 +27,7 @@
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 0;
-    animation: reveal 0.8s cubic-bezier(0.5, -0.2, 0.1, 1.2) forwards;
+    animation: reveal 1.5s forwards;
     @media (min-width: 42rem) {
       flex-direction: row;
       justify-content: space-between;
@@ -39,7 +39,6 @@
     font-weight: 600;
     text-transform: capitalize;
     font-size: 1.4rem;
-    transition: all 0.2s ease-in-out;
     display: flex;
     align-items: center;
     position: relative;

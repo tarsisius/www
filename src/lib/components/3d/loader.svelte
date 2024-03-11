@@ -9,6 +9,7 @@
     SRGBColorSpace,
     Scene,
     Texture,
+    TextureLoader,
     Vector3,
     WebGLRenderer,
   } from 'three'
@@ -19,13 +20,12 @@
     RenderPass,
     RenderPixelatedPass,
   } from 'three/addons'
+  import wkwk from '$lib/assets/wkwk.webp'
 
-  export let texture: Texture
   let el: HTMLCanvasElement
 
   onMount(() => {
     const camera = new PerspectiveCamera(3.8, 1 / 1, 0.01, 50000)
-
     camera.position.y = 20
     camera.position.x = 20 * Math.sin(0.2 * Math.PI)
     camera.position.z = 20 * Math.cos(0.2 * Math.PI)
@@ -33,13 +33,13 @@
 
     const geometry = new BoxGeometry()
     const material = new MeshLambertMaterial()
+    const textureLoader = new TextureLoader()
 
+    const texture = textureLoader.load(wkwk)
     material.map = texture
-    material.needsUpdate = true
 
     const cube = new Mesh(geometry, material)
-
-    const ambientLight = new AmbientLight(0x404040, 30)
+    const ambientLight = new AmbientLight(0x404040, 20)
 
     const scene = new Scene()
     scene.add(cube)
@@ -49,19 +49,13 @@
       canvas: el,
       antialias: false,
     })
-
     renderer.setClearColor(0x000000, 0)
-    renderer.outputColorSpace = SRGBColorSpace
-    renderer.shadowMap.enabled = true
+    renderer.setSize(100, 100)
+    renderer.setPixelRatio(1)
 
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = false
     controls.enableZoom = false
-
-    renderer.setSize(100, 100)
-    renderer.setPixelRatio(1)
-    camera.aspect = 1 / 1
-    camera.updateProjectionMatrix()
 
     const composer = new EffectComposer(renderer)
 
@@ -76,6 +70,9 @@
 
     const animate = () => {
       requestAnimationFrame(animate)
+
+      camera.updateProjectionMatrix()
+
       cube.rotation.x += 0.01 * 0.25
       cube.rotation.y += 0.01 * 0.25
       cube.rotation.z += 0.01 * 0.25
@@ -91,7 +88,8 @@
 
 <style>
   canvas {
-    animation: reveal 1.5s forwards;
+    animation: fade 1.5s forwards;
     margin: 0;
+    height: 100px;
   }
 </style>

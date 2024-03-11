@@ -9,10 +9,10 @@
 
 <style>
   main {
-    max-width: 34rem;
+    max-width: 36rem;
     margin: 1rem auto;
     padding: 0 1rem;
-    @media (min-width: 34rem) {
+    @media (min-width: 36rem) {
       margin: 2rem auto;
       padding: 0 2rem;
     }

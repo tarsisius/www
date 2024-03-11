@@ -21,7 +21,7 @@
   }
 
   :global(p) {
-    line-height: 1.8rem;
+    line-height: 1.75rem;
   }
 
   :global(a) {

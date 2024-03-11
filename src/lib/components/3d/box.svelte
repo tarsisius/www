@@ -5,9 +5,10 @@
   const { load } = useLoader(TextureLoader)
 
   let mesh: Mesh
-
+  
   useTask((delta) => {
     if (!mesh) return
+
     mesh.rotation.x += delta * 0.25
     mesh.rotation.y += delta * 0.25
     mesh.rotation.z += delta * 0.25

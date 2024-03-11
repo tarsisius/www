@@ -12,10 +12,11 @@
   }
 
   :global(body) {
+    margin: 0;
     font-family: 'JetBrains Mono', sans-serif;
     font-weight: 400;
-    color: var(--white);
-    background-color: var(--black);
+    color: var(--black);
+    background-color: var(--white);
     font-size: 12pt;
   }
 
@@ -25,7 +26,8 @@
 
   :global(a) {
     color: var(--blue);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
   }
 
   @keyframes -global-reveal {

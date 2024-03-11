@@ -35,11 +35,6 @@
     }
   }
 
-  .card a {
-    color: inherit;
-    text-decoration: none;
-  }
-
   h2 {
     font-weight: 600;
     text-transform: capitalize;

@@ -1,9 +1,12 @@
 <script lang="ts">
-  import ThreeDScene from '$lib/components/3d/scene.svelte'
+  // import ThreeDScene from '$lib/components/3d/scene.svelte'
+  import Loader from './bare-three/loader.svelte'
 </script>
 
 <header>
-  <ThreeDScene />
+  <!-- <ThreeDScene /> -->
+
+  <Loader />
 </header>
 
 <style>
@@ -14,9 +17,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
     @media (min-width: 34rem) {
-      padding: 1rem 2rem;
+      padding: 2rem 2rem;
     }
   }
 </style>

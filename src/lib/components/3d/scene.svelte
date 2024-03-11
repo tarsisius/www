@@ -28,6 +28,6 @@
     padding: 0;
     height: 120px;
     width: 120px;
-    animation: reveal 1s forwards;
+    animation: reveal 1s backwards;
   }
 </style>

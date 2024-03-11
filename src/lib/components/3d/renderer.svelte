@@ -8,9 +8,7 @@
     RenderPass,
     SMAAEffect,
     SMAAPreset,
-    BloomEffect,
     PixelationEffect,
-    KernelSize,
   } from 'postprocessing'
   const { scene, renderer, camera, size } = useThrelte()
   // Adapt the default WebGLRenderer: https://github.com/pmndrs/postprocessing#usage

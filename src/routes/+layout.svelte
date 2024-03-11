@@ -23,6 +23,11 @@
     line-height: 1.8rem;
   }
 
+  :global(a) {
+    color: var(--blue);
+    text-decoration: none;
+  }
+
   @keyframes -global-reveal {
     0% {
       opacity: 0;

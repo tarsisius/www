@@ -52,7 +52,7 @@
 
     const renderer = new WebGLRenderer({
       canvas: el,
-      antialias: true,
+      antialias: false,
     })
 
     renderer.setClearColor(0x000000, 0)
@@ -96,6 +96,7 @@
 
 <style>
   canvas {
+    animation: reveal 1.5s forwards;
     margin: 0;
   }
 </style>

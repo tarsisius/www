@@ -6,9 +6,7 @@
     Mesh,
     MeshLambertMaterial,
     PerspectiveCamera,
-    SRGBColorSpace,
     Scene,
-    Texture,
     TextureLoader,
     Vector3,
     WebGLRenderer,
@@ -71,15 +69,13 @@
     const animate = () => {
       requestAnimationFrame(animate)
 
-      camera.updateProjectionMatrix()
-
       cube.rotation.x += 0.01 * 0.25
       cube.rotation.y += 0.01 * 0.25
       cube.rotation.z += 0.01 * 0.25
 
-      controls.update()
       composer.render()
     }
+
     animate()
   })
 </script>

@@ -8,21 +8,19 @@
     PerspectiveCamera,
     SRGBColorSpace,
     Scene,
-    TextureLoader,
+    Texture,
     Vector3,
     WebGLRenderer,
   } from 'three'
   import {
     EffectComposer,
-    GlitchPass,
     OrbitControls,
     OutputPass,
     RenderPass,
     RenderPixelatedPass,
   } from 'three/addons'
 
-  import wkwk from '$lib/assets/wkwk.webp'
-
+  export let texture: Texture
   let el: HTMLCanvasElement
 
   onMount(() => {
@@ -36,11 +34,8 @@
     const geometry = new BoxGeometry()
     const material = new MeshLambertMaterial()
 
-    const textureLoader = new TextureLoader()
-    textureLoader.load(wkwk, (t) => {
-      material.map = t
-      material.needsUpdate = true
-    })
+    material.map = texture
+    material.needsUpdate = true
 
     const cube = new Mesh(geometry, material)
 

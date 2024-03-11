@@ -10,13 +10,21 @@
     SMAAPreset,
     PixelationEffect,
   } from 'postprocessing'
+
+  let innerWidth = 0
+  let innerHeight = 0
+
+  $: condition = innerWidth * 1.33 <= innerHeight
+
   const { scene, renderer, camera, size } = useThrelte()
   // Adapt the default WebGLRenderer: https://github.com/pmndrs/postprocessing#usage
   const composer = new EffectComposer(renderer)
   const setupEffectComposer = (camera: Camera) => {
     composer.removeAllPasses()
     composer.addPass(new RenderPass(scene, camera))
-    composer.addPass(new EffectPass(camera, new PixelationEffect(5.0)))
+    composer.addPass(
+      new EffectPass(camera, new PixelationEffect(condition ? 8.0 : 5.0))
+    )
     composer.addPass(
       new EffectPass(camera, new SMAAEffect({ preset: SMAAPreset.LOW }))
     )
@@ -42,3 +50,5 @@
     }
   )
 </script>
+
+<svelte:window bind:innerWidth bind:innerHeight />

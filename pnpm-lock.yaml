@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource-variable/albert-sans':
+    specifier: ^5.0.13
+    version: 5.0.13
   rehype-sanitize:
     specifier: ^6.0.0
     version: 6.0.0
@@ -263,6 +266,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource-variable/albert-sans@5.0.13:
+    resolution: {integrity: sha512-/bRH+7zTEL/jAhjpgvB+1yszP44YiJkk4KNFPKJDM1BvyTLua9E/55LkCDO3lPwlxjCe/FNxm04hTuBl8ZcHbQ==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.5:
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}

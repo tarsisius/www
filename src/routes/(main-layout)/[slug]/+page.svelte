@@ -22,12 +22,12 @@
   <h1 class="title">{data.post.meta.title}</h1>
   <div class="published">
     <date datetime={data.post.meta.published.date}>
-      {data.post.meta.published.date}
       <Date size={14} />
+      {data.post.meta.published.date}
     </date>
     <time datetime={data.post.meta.published.time}>
-      {data.post.meta.published.time}
       <Time size={12} />
+      {data.post.meta.published.time}
     </time>
   </div>
   <div class="main-content">
@@ -42,27 +42,33 @@
   }
 
   .top {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     animation: fade 0.8s forwards;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-  }
-
-  .top a {
-    color: var(--blue);
+    @media (min-width: 42rem) {
+      margin-bottom: 1rem;
+    }
   }
 
   .title {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    line-height: 3.25rem;
+    margin-bottom: 1rem;
     font-weight: 700;
+    @media (min-width: 42rem) {
+      margin-bottom: 2rem;
+    }
   }
 
   .published {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    @media (min-width: 42rem) {
+      margin-bottom: 2rem;
+    }
   }
 
   .published date {

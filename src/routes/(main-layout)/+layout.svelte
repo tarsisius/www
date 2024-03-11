@@ -11,7 +11,7 @@
   main {
     max-width: 38rem;
     margin: 1rem auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
     @media (min-width: 38rem) {
       margin: 2rem auto;
       padding: 0 2rem;

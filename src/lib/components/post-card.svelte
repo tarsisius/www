@@ -14,10 +14,10 @@
     </h2>
   </a>
   <div class="right">
+    <Date size={14} />
     <div class="date">
       {published.date}
     </div>
-    <Date size={14} />
   </div>
 </div>
 
@@ -38,12 +38,15 @@
   h2 {
     font-weight: 600;
     text-transform: capitalize;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    line-height: 2.25rem;
     display: flex;
     align-items: center;
     position: relative;
     margin: 0;
-    color: var(--blue);
+    @media (min-width: 42rem) {
+      font-size: 1.4rem;
+    }
   }
 
   .right {

@@ -1,19 +1,18 @@
-<script>
-  import '../app.css'
+<script lang="ts">
+  import '@fontsource-variable/albert-sans'
 </script>
 
 <slot />
 
 <style>
   :global(:root) {
-    --blue: #10a0a0;
     --black: #040304;
     --white: #f8f8f8;
   }
 
   :global(body) {
     margin: 0;
-    font-family: 'JetBrains Mono', sans-serif;
+    font-family: 'Albert Sans Variable', sans-serif;
     font-weight: 400;
     color: var(--black);
     background-color: var(--white);
@@ -25,9 +24,8 @@
   }
 
   :global(a) {
-    color: var(--blue);
-    text-decoration: underline;
-    text-decoration-color: var(--blue);
+    color: var(--black);
+    text-decoration: none;
   }
 
   @keyframes -global-reveal {

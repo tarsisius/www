@@ -54,7 +54,7 @@
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     font-weight: 700;
   }

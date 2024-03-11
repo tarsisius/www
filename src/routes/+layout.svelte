@@ -2,9 +2,7 @@
   import "../app.css"
 </script>
 
-<main>
-  <slot />
-</main>
+<slot />
 
 <style>
   :global(:root) {

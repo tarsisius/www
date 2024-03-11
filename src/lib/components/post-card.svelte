@@ -43,7 +43,7 @@
   h2 {
     font-weight: 600;
     text-transform: capitalize;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     transition: all 0.2s ease-in-out;
     display: flex;
     align-items: center;

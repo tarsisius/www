@@ -1,6 +1,6 @@
 <script lang="ts">
   import { T, Canvas } from "@threlte/core"
-  import { OrbitControls } from "@threlte/extras"
+  import { ContactShadows, Environment, OrbitControls } from "@threlte/extras"
 
   import ThreeDBox from "$lib/components/3d/box.svelte"
 </script>
@@ -15,8 +15,8 @@
       }}>
       <OrbitControls enableDamping />
     </T.PerspectiveCamera>
-    <T.AmbientLight intensity={2} />
     <ThreeDBox />
+    <T.AmbientLight intensity={1} />
   </Canvas>
 </h1>
 

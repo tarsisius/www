@@ -3,27 +3,20 @@
 </script>
 
 <header>
-  <figure>
-    <ThreeDScene />
-  </figure>
+  <ThreeDScene />
 </header>
 
 <style>
   header {
-    max-width: 42rem;
+    max-width: 34rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     padding: 1rem 1rem;
-    @media (min-width: 42rem) {
+    @media (min-width: 34rem) {
       padding: 1rem 2rem;
     }
-  }
-
-  header figure {
-    margin: 0;
-    padding: 0;
   }
 </style>

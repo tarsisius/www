@@ -26,8 +26,8 @@
   h1 {
     margin: 0;
     padding: 0;
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     animation: reveal 1s forwards;
   }
 </style>

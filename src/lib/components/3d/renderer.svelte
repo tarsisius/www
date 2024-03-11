@@ -32,7 +32,7 @@
         })
       )
     )
-    composer.addPass(new EffectPass(camera, new PixelationEffect(4)))
+    composer.addPass(new EffectPass(camera, new PixelationEffect(4.6)))
     composer.addPass(
       new EffectPass(camera, new SMAAEffect({ preset: SMAAPreset.LOW }))
     )

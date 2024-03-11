@@ -10,7 +10,7 @@ const config = {
       precompress: true,
     }),
     paths: {
-      base: process.argv.includes("dev") ? "" : "/www",
+      base: process.argv.includes("dev") ? "" : "",
     },
   },
 }

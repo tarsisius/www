@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { base } from "$app/paths"
-  import Date from "$lib/components/icons/date.svelte"
-  import type { Meta } from "$lib/extract"
+  import { base } from '$app/paths'
+  import Date from '$lib/components/icons/date.svelte'
+  import type { Meta } from '$lib/extract'
 
   export let meta: Meta
   $: ({ title, slug, published } = meta)
@@ -17,7 +17,7 @@
     <div class="date">
       {published.date}
     </div>
-    <Date size={14}/>
+    <Date size={14} />
   </div>
 </div>
 
@@ -27,11 +27,11 @@
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 0;
+    animation: reveal 0.8s cubic-bezier(0.5, -0.2, 0.1, 1.2) forwards;
     @media (min-width: 42rem) {
       flex-direction: row;
       justify-content: space-between;
       vertical-align: baseline;
-      animation: reveal 0.8s cubic-bezier(0.5, -0.2, 0.1, 1.2) forwards;
     }
   }
 

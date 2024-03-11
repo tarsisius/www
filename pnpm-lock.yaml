@@ -11,6 +11,9 @@ dependencies:
   '@threlte/extras':
     specifier: ^8.10.1
     version: 8.10.1(svelte@4.2.12)(three@0.158.0)
+  postprocessing:
+    specifier: ^6.35.2
+    version: 6.35.2(three@0.158.0)
   rehype-sanitize:
     specifier: ^6.0.0
     version: 6.0.0
@@ -1118,6 +1121,15 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
+
+  /postprocessing@6.35.2(three@0.158.0):
+    resolution: {integrity: sha512-yGmidrVzA1dSEmExYGgWOGcRvyOVahvurNo9iuzOonRCY6f1hnJe6/HMVSnKV9ppjLtCTqzZOI9iz8CACkmijw==}
+    engines: {node: '>= 0.13.2'}
+    peerDependencies:
+      three: '>= 0.152.0 < 0.163.0'
+    dependencies:
+      three: 0.158.0
+    dev: false
 
   /property-information@6.4.1:
     resolution: {integrity: sha512-OHYtXfu5aI2sS2LWFSN5rgJjrQ4pCy8i1jubJLe2QvMF8JJ++HXTUIVWFLfXJoaOfvYYjk2SN8J2wFUWIGXT4w==}

@@ -1,5 +1,5 @@
 <script>
-  import "../app.css"
+  import '../app.css'
 </script>
 
 <slot />
@@ -12,7 +12,7 @@
   }
 
   :global(body) {
-    font-family: "JetBrains Mono", sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
     font-weight: 400;
     color: var(--white);
     background-color: var(--black);

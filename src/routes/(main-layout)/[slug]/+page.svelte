@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { base } from "$app/paths"
+  import { base } from '$app/paths'
 
-  import Date from "$lib/components/icons/date.svelte"
-  import Time from "$lib/components/icons/time.svelte"
-  import ChevronLeft from "$lib/components/icons/chevron-left.svelte"
+  import Date from '$lib/components/icons/date.svelte'
+  import Time from '$lib/components/icons/time.svelte'
+  import ChevronLeft from '$lib/components/icons/chevron-left.svelte'
 
-  import type { PageData } from "./$types"
+  import type { PageData } from './$types'
   export let data: PageData
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ThreeDScene from "$lib/components/3d/scene.svelte"
+  import ThreeDScene from '$lib/components/3d/scene.svelte'
 </script>
 
 <header>

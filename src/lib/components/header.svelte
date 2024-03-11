@@ -1,15 +1,16 @@
 <script lang="ts">
-  import { TextureLoader } from 'three'
-  import Loader from '$lib/components/3d/loader.svelte'
-  import wkwk from '$lib/assets/wkwk.webp'
-
-  const textureLoader = new TextureLoader()
+  // import { TextureLoader } from 'three'
+  // import Loader from '$lib/components/3d/loader.svelte'
+  import ThrelteScene from '$lib/components/threlte/scene.svelte'
+  // import wkwk from '$lib/assets/wkwk.webp'
+  // const textureLoader = new TextureLoader()
 </script>
 
 <header>
-  {#await textureLoader.loadAsync(wkwk) then texture}
+  <!-- {#await textureLoader.loadAsync(wkwk) then texture}
     <Loader {texture} />
-  {/await}
+  {/await} -->
+  <ThrelteScene />
 </header>
 
 <style>
@@ -20,9 +21,9 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     @media (min-width: 34rem) {
-      padding: 2rem 2rem;
+      padding: 1rem 2rem;
     }
   }
 </style>

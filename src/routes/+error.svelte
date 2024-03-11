@@ -30,10 +30,10 @@ $$$$$$$$ |$$\$$\$$ |$$$$$$$$ |
     gap: 1rem;
     height: 100vh;
     justify-content: center;
-    max-width: 32rem;
+    max-width: 38rem;
     margin: 0 auto;
     padding: 0 1rem;
-    @media (min-width: 32rem) {
+    @media (min-width: 38rem) {
       padding: 0 2rem;
     }
   }

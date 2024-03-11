@@ -8,14 +8,14 @@
 
 <style>
   header {
-    max-width: 36rem;
+    max-width: 38rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     padding: 1rem 1rem;
-    @media (min-width: 36rem) {
+    @media (min-width: 38rem) {
       padding: 1rem 2rem;
     }
   }

@@ -68,25 +68,16 @@
     camera.aspect = 1 / 1
     camera.updateProjectionMatrix()
 
-    
-
     const composer = new EffectComposer(renderer)
 
     const renderPass = new RenderPass(scene, camera)
     composer.addPass(renderPass)
 
-    const glitchPass = new GlitchPass()
-    composer.addPass(glitchPass)
+    const renderPixelatedPass = new RenderPixelatedPass(2.25, scene, camera)
+    composer.addPass(renderPixelatedPass)
 
     const outputPass = new OutputPass()
     composer.addPass(outputPass)
-
-
-    // const renderPixelatedPass = new RenderPixelatedPass(6, scene, camera)
-    // composer.addPass(renderPixelatedPass)
-
-    // const outputPass = new OutputPass()
-    // composer.addPass(outputPass)
 
     const animate = () => {
       requestAnimationFrame(animate)
@@ -96,7 +87,6 @@
 
       controls.update()
       composer.render()
-      renderer.render(scene, camera)
     }
     animate()
   })

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import Date from '$lib/components/icons/date.svelte'
-  import type { Meta } from '$lib/extract'
+  import type { Meta } from '$lib/const'
 
   export let meta: Meta
   $: ({ title, slug, published } = meta)

@@ -18,7 +18,7 @@
     RenderPass,
     RenderPixelatedPass,
   } from 'three/addons'
-  import wkwk from '$lib/assets/wkwk.webp'
+  import wkwk from '$lib/images/wkwk.webp'
 
   let el: HTMLCanvasElement
 

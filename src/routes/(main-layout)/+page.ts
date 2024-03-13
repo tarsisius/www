@@ -1,8 +1,8 @@
 import type { PageLoad } from './$types'
-import { getAllMeta } from '$lib/extract'
+import meta from '$lib/meta'
 
-export const load: PageLoad = () => {
+export const load: PageLoad = async () => {
   return {
-    meta: getAllMeta(),
+    meta: await meta(),
   }
 }

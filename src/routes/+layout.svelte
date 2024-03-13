@@ -12,7 +12,7 @@
 
   :global(body) {
     margin: 0;
-    font-family: 'Albert Sans Variable', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
     font-weight: 400;
     color: var(--black);
     background-color: var(--white);

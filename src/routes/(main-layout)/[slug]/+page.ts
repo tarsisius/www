@@ -1,15 +1,16 @@
 import { error } from '@sveltejs/kit'
-import { getContentBySlug, getMetaBySlug } from '$lib/extract'
+import getMeta from '$lib/meta'
+import getHtml from '$lib/html'
 import type { PageLoad } from './$types'
 
 export const load: PageLoad = async ({ params }) => {
-  const meta = getMetaBySlug(params.slug)
-  if (meta) {
-    const content = await getContentBySlug(params.slug)
+  const meta = await getMeta(params.slug)
+  if (meta[0]) {
+    const html = await getHtml(params.slug)
     return {
       post: {
-        meta,
-        content,
+        meta: meta[0],
+        html,
       },
     }
   } else {

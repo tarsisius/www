@@ -1,8 +1,8 @@
-import { unified } from "unified"
-import rehypeSanitize from "rehype-sanitize"
-import rehypeStringify from "rehype-stringify"
-import remarkParse from "remark-parse"
-import remarkRehype from "remark-rehype"
+import { unified } from 'unified'
+import rehypeSanitize from 'rehype-sanitize'
+import rehypeStringify from 'rehype-stringify'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
 
 export type Meta = {
   title: string
@@ -17,15 +17,15 @@ export type Meta = {
   }
 }
 
-const DELIMITER = "@@@"
+const DELIMITER = '@@@'
 
 export function getAllMeta(): Meta[] {
   const meta: Meta[] = []
 
-  const files = import.meta.glob("/content/*/post.md", {
+  const files = import.meta.glob('$lib/posts/*/post.md', {
     eager: true,
-    import: "default",
-    query: "raw",
+    import: 'default',
+    query: 'raw',
   })
 
   for (const [path, file] of Object.entries(files)) {
@@ -34,29 +34,30 @@ export function getAllMeta(): Meta[] {
     const publishedMatch = metaData.match(/^published: (.*)/m)
     const updatedMatch = metaData.match(/^updated: (.*)/m)
 
-    const slug = path.split("/")[2]
+    const url = path.split('/')
+    const slug = url[url.length - 2]
 
     meta.push({
       title: slug
         .replace(/\b\w/g, (match) => match.toUpperCase())
-        .split("-")
-        .join(" "),
+        .split('-')
+        .join(' '),
       slug,
       published: {
-        date: publishedMatch![1].split("/")[0].replaceAll("-", "/"),
-        time: publishedMatch![1].split("/")[1],
+        date: publishedMatch![1].split('/')[0].replaceAll('-', '/'),
+        time: publishedMatch![1].split('/')[1],
       },
       updated: {
-        date: updatedMatch![1].split("/")[0].replaceAll("-", "/"),
-        time: updatedMatch![1].split("/")[1],
+        date: updatedMatch![1].split('/')[0].replaceAll('-', '/'),
+        time: updatedMatch![1].split('/')[1],
       },
     })
   }
 
   return meta.sort((a, b) => {
     return (
-      new Date(b.published.date + " " + b.published.time).getTime() -
-      new Date(a.published.date + " " + a.published.time).getTime()
+      new Date(b.published.date + ' ' + b.published.time).getTime() -
+      new Date(a.published.date + ' ' + a.published.time).getTime()
     )
   })
 }
@@ -68,20 +69,26 @@ export function getMetaBySlug(slug: string): Meta {
 export async function getContentBySlug(slug: string): Promise<string> {
   const content: string[] = []
 
-  const files = import.meta.glob("/content/*/post.md", {
+  const files = import.meta.glob('$lib/posts/*/post.md', {
     eager: true,
-    import: "default",
-    query: "raw",
+    import: 'default',
+    query: 'raw',
   })
 
   for (const [path, file] of Object.entries(files)) {
-    const contentData = await unified()
-      .use(remarkParse)
-      .use(remarkRehype)
-      .use(rehypeSanitize)
-      .use(rehypeStringify)
-      .process((file as string).split(DELIMITER)[1])
-    path.split("/")[2] === slug && content.push(contentData.toString())
+    const url = path.split('/')
+    if (url[url.length - 2] === slug) {
+        content.push(
+          (
+            await unified()
+              .use(remarkParse)
+              .use(remarkRehype)
+              .use(rehypeSanitize)
+              .use(rehypeStringify)
+              .process((file as string).split(DELIMITER)[1])
+          ).toString()
+        )
+      }
   }
 
   return content[0]

@@ -31,7 +31,7 @@
     </time>
   </div>
   <div class="main-content">
-    {@html data.post.content}
+    {@html data.post.html}
   </div>
 </article>
 

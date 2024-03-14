@@ -12,7 +12,9 @@
 
 <article>
   {#each data.meta as meta}
-    <PostCard {meta} />
+    <div>
+      <PostCard {meta} home />
+    </div>
   {/each}
 </article>
 

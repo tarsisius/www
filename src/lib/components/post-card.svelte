@@ -1,39 +1,64 @@
 <script lang="ts">
-  import { base } from '$app/paths'
   import type { Meta } from '$lib/const'
+  import Date from '$lib/components/icons/date.svelte'
+  import Time from '$lib/components/icons/time.svelte'
+  import { base } from '$app/paths'
 
   export let meta: Meta
+  export let home: boolean
   $: ({ title, slug, published } = meta)
 </script>
 
-<a href="{base}/{slug}">
-  <span>
-    {published.date}
-  </span>
-  <b>
+<h1 class="title">
+  {#if home}
+    <a href="{base}/{slug}">{title}</a>
+  {:else}
     {title}
-  </b>
-</a>
+  {/if}
+</h1>
+<div class="published">
+  <date datetime={published.date}>
+    <Date size={14} />
+    {published.date}
+  </date>
+  <time datetime={published.time}>
+    <Time size={12} />
+    {published.time}
+  </time>
+</div>
 
 <style>
-  a {
-    position: relative;
-    margin: 0;
-    transition-timing-function: cubic-bezier(0.2, -0.25, 0, 1.6);
-    transition-duration: 0.3s;
-    transition-property: transform;
+  .title {
+    color: var(--text-hover);
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: bolder;
   }
 
-  a:hover {
+  .title a {
     color: var(--text-hover);
   }
 
-  a span {
-    opacity: 0.5;
-    margin-right: 0.5rem;
+  .title a:hover {
+    color: var(--text);
   }
 
-  a b {
-    font-weight: bolder;
+  .published {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .published date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .published time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 </style>

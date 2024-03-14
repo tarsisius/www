@@ -21,6 +21,7 @@
   }
 
   :global(p) {
+    font-size: inherit;
     line-height: 1.75rem;
   }
 

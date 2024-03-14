@@ -47,7 +47,7 @@ $$$$$$$$ |$$\$$\$$ |$$$$$$$$ |
   }
 
   .top a {
-    color: var(--blue);
+    color: var(--text);
   }
 
   pre {

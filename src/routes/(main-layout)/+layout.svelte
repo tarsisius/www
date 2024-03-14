@@ -1,20 +1,21 @@
 <script lang="ts">
+  import Footer from '$lib/components/footer.svelte'
   import Header from '$lib/components/header.svelte'
 </script>
 
-<Header />
 <main>
+  <Header />
   <slot />
+  <Footer />
 </main>
 
 <style>
   main {
-    max-width: 38rem;
-    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 32rem;
+    margin: 0 auto;
     padding: 0 2rem;
-    @media (min-width: 38rem) {
-      margin: 2rem auto;
-      padding: 0 2rem;
-    }
   }
 </style>

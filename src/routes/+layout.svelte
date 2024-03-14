@@ -6,16 +6,17 @@
 
 <style>
   :global(:root) {
-    --black: #040304;
-    --white: #f8f8f8;
+    --text: #9ca3af;
+    --text-hover: #374151;
+    --bg: #fff;
   }
 
   :global(body) {
     margin: 0;
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Fira Code', monospace;
     font-weight: 400;
-    color: var(--black);
-    background-color: var(--white);
+    color: var(--text);
+    background-color: var(--bg);
     font-size: 12pt;
   }
 
@@ -24,7 +25,7 @@
   }
 
   :global(a) {
-    color: var(--black);
+    color: var(--text);
     text-decoration: none;
   }
 

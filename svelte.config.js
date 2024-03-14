@@ -7,9 +7,9 @@ const config = {
   kit: {
     adapter: adapter({
       fallback: '404.html',
-      precompress: true,
     }),
     paths: {
+      //only if using github pages and custom domain
       //if using custom domain leave empty
       //if using github.io second empty string should be the repo name
       base: process.argv.includes('dev') ? '' : '',

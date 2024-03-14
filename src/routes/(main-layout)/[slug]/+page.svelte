@@ -47,28 +47,24 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    @media (min-width: 42rem) {
-      margin-bottom: 1rem;
-    }
+  }
+
+  .top a:hover {
+    color: var(--text-hover);
   }
 
   .title {
-    font-size: 2rem;
-    line-height: 3.25rem;
+    color: var(--text-hover);
+    font-size: 1.6rem;
+    line-height: 2.8rem;
     margin-bottom: 1rem;
-    font-weight: 700;
-    @media (min-width: 42rem) {
-      margin-bottom: 2rem;
-    }
+    font-weight: bolder;
   }
 
   .published {
     display: flex;
     gap: 0.5rem;
     margin-bottom: 1rem;
-    @media (min-width: 42rem) {
-      margin-bottom: 2rem;
-    }
   }
 
   .published date {
@@ -84,6 +80,7 @@
   }
 
   .main-content {
+    color: var(--text-hover);
     animation: fade 1.6s forwards;
   }
 </style>

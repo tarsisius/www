@@ -13,7 +13,7 @@
 
   :global(body) {
     margin: 0;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Albert Sans', sans-serif;
     font-weight: 400;
     color: var(--text);
     background-color: var(--bg);

@@ -12,6 +12,9 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    padding: 1rem 1rem;
+
+    max-width: 32rem;
+    margin: 2.75rem auto;
+    padding: 0 2rem;
   }
 </style>

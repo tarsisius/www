@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import ChevronLeft from '$lib/components/icons/chevron-left.svelte'
-  import PostCard from '$lib/components/post-card.svelte'
+  import Card from '$lib/components/card.svelte'
 
   import type { PageData } from './$types'
   export let data: PageData
@@ -17,7 +17,7 @@
     <ChevronLeft size={14} />
     <a href="{base}/">back to list</a>
   </div>
-  <PostCard meta={data.post.meta} home={false} />
+  <Card meta={data.post.meta} home={false} />
   <div class="main-content">
     {@html data.post.html}
   </div>
@@ -25,8 +25,9 @@
 
 <style>
   article {
-    display: flex;
-    flex-direction: column;
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
 
   .top {

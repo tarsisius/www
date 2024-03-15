@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types'
-  import PostCard from '$lib/components/post-card.svelte'
+  import Card from '$lib/components/card.svelte'
 
   export let data: PageData
 </script>
@@ -10,18 +10,16 @@
   <meta name="description" content="It's my life logging" />
 </svelte:head>
 
-<article>
+<div class="home">
   {#each data.meta as meta}
-    <div>
-      <PostCard {meta} home />
-    </div>
+    <Card {meta} home />
   {/each}
-</article>
+</div>
 
 <style>
-  article {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
+  .home {
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
 </style>

@@ -9,29 +9,37 @@
   $: ({ title, slug, published } = meta)
 </script>
 
-<h1 class="title">
-  {#if home}
-    <a href="{base}/{slug}">{title}</a>
-  {:else}
-    {title}
-  {/if}
-</h1>
-<div class="published">
-  <date datetime={published.date}>
-    <Date size={14} />
-    {published.date}
-  </date>
-  <time datetime={published.time}>
-    <Time size={12} />
-    {published.time}
-  </time>
-</div>
+<article>
+  <h1 class="title">
+    {#if home}
+      <a href="{base}/{slug}">{title}</a>
+    {:else}
+      {title}
+    {/if}
+  </h1>
+  <div class="published">
+    <date datetime={published.date}>
+      <Date size={14} />
+      {published.date}
+    </date>
+    <time datetime={published.time}>
+      <Time size={12} />
+      {published.time}
+    </time>
+  </div>
+</article>
 
 <style>
+  article {
+    margin-bottom: 2.75rem;
+  }
+
   .title {
+    font-family: 'Anton', sans-serif;
     color: var(--text-hover);
     font-size: 1.6rem;
     line-height: 2.8rem;
+    margin: 0;
     margin-bottom: 1rem;
     font-weight: bolder;
   }

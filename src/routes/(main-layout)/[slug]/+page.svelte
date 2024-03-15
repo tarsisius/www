@@ -31,7 +31,7 @@
   }
 
   .top {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     animation: fade 0.8s forwards;
     display: flex;
     align-items: center;

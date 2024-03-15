@@ -13,10 +13,8 @@
 <style>
   .footer {
     max-width: 32rem;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 0 2rem;
-
-    margin-top: 2rem;
     font-size: inherit;
     font-weight: inherit;
   }

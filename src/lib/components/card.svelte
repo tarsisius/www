@@ -1,12 +1,14 @@
 <script lang="ts">
   import type { Meta } from '$lib/const'
+  import { base } from '$app/paths'
   import Date from '$lib/components/icons/date.svelte'
   import Time from '$lib/components/icons/time.svelte'
-  import { base } from '$app/paths'
 
   export let meta: Meta
   export let home: boolean
   $: ({ title, slug, published } = meta)
+
+  import { dateFormat } from '$lib/time'
 </script>
 
 <article>
@@ -20,7 +22,7 @@
   <div class="published">
     <date datetime={published.date}>
       <Date size={14} />
-      {published.date}
+      {dateFormat(published.date)}
     </date>
     <time datetime={published.time}>
       <Time size={12} />
@@ -35,7 +37,8 @@
   }
 
   .title {
-    font-family: 'Anton', sans-serif;
+    /* font-family: 'Anton', sans-serif; */
+    font-family: var(--font-serif-light);
     color: var(--text-hover);
     font-size: 1.6rem;
     line-height: 2.8rem;
@@ -56,6 +59,9 @@
     display: flex;
     gap: 0.5rem;
     margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    font-size: 0.8rem;
+    text-transform: uppercase;
   }
 
   .published date {

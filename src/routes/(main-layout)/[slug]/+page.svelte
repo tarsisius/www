@@ -31,6 +31,8 @@
   }
 
   .top {
+    text-transform: uppercase;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
     animation: fade 0.8s forwards;
     display: flex;

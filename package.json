@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@fontsource-variable/albert-sans": "^5.0.13",
+    "dayjs": "^1.11.10",
     "rehype-sanitize": "^6.0.0",
     "rehype-stringify": "^10.0.0",
     "remark-parse": "^11.0.0",

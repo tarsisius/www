@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { PageData } from './$types'
+  import type { PageServerData } from './$types'
   import Card from '$lib/components/card.svelte'
 
-  export let data: PageData
+  export let data: PageServerData
 </script>
 
 <svelte:head>
@@ -11,8 +11,8 @@
 </svelte:head>
 
 <div class="home">
-  {#each data.meta as meta}
-    <Card {meta} home />
+  {#each data.posts as post}
+    <Card meta={post} home />
   {/each}
 </div>
 

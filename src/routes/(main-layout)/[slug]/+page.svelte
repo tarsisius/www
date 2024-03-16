@@ -3,13 +3,13 @@
   import ChevronLeft from '$lib/components/icons/chevron-left.svelte'
   import Card from '$lib/components/card.svelte'
 
-  import type { PageData } from './$types'
-  export let data: PageData
+  import type { PageServerData } from './$types'
+  export let data: PageServerData
 </script>
 
 <svelte:head>
-  <title>thp. | {data.post.meta.title}</title>
-  <meta name="description" content={data.post.meta.title} />
+  <title>thp. | {data.post.title}</title>
+  <meta name="description" content={data.post.title} />
 </svelte:head>
 
 <article>
@@ -17,7 +17,7 @@
     <ChevronLeft size={14} />
     <a href="{base}/">back to list</a>
   </div>
-  <Card meta={data.post.meta} home={false} />
+  <Card meta={data.post} home={false} />
   <div class="main-content">
     {@html data.post.html}
   </div>

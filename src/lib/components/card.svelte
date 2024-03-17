@@ -1,11 +1,11 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import { base } from '$app/paths'
-  import Date from '$lib/components/icons/date.svelte'
-  import Time from '$lib/components/icons/time.svelte'
+
   import { dateFormat } from '$lib/time'
   import type { Meta } from '$lib/type'
-  import { onMount } from 'svelte'
-  import { animate, stagger } from 'motion'
+
+  import { stagger, timeline } from 'motion'
   import SplitType from 'split-type'
 
   export let meta: Meta
@@ -14,14 +14,25 @@
   $: ({ title, slug, published } = meta)
 
   let titleText: HTMLParagraphElement | HTMLAnchorElement
+
   onMount(() => {
     const splitTitle = new SplitType(titleText)
 
-    animate(
-      splitTitle.words!,
-      { y: ['-100%', '0%'], opacity: [0, 1] },
-      { delay: stagger(0.08), duration: 1, easing: [0.2, 0.8, 0.2, 1] }
-    )
+    timeline([
+      [titleText, { opacity: 1 }, { duration: 0 }],
+      [
+        splitTitle.words!,
+        {
+          y: ['-100%', '0%'],
+          opacity: [0, 1],
+        },
+        {
+          delay: stagger(0.08),
+          easing: [0.2, 0.8, 0.2, 1],
+          duration: 1,
+        },
+      ],
+    ])
   })
 </script>
 
@@ -37,11 +48,9 @@
   </h1>
   <div class="published">
     <date datetime={published.date}>
-      <Date size={14} />
       {dateFormat(published.date)}
     </date>
     <time datetime={published.time}>
-      <Time size={12} />
       {published.time}
     </time>
   </div>
@@ -53,7 +62,6 @@
   }
 
   .title {
-    font-family: var(--font-serif-light);
     color: var(--text-hover);
     font-size: 1.6rem;
     line-height: 2.8rem;
@@ -63,11 +71,16 @@
   }
 
   .title a {
+    opacity: 0;
     color: var(--text-hover);
   }
 
   .title a:hover {
     color: var(--text);
+  }
+
+  .title p {
+    opacity: 0;
   }
 
   .published {
@@ -80,12 +93,7 @@
     animation: fade 0.8s forwards;
   }
 
-  .published date {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
+  .published date,
   .published time {
     display: flex;
     align-items: center;

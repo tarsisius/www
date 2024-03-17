@@ -30,12 +30,9 @@ $$$$$$$$ |$$\$$\$$ |$$$$$$$$ |
     gap: 1rem;
     height: 100vh;
     justify-content: center;
-    max-width: 38rem;
+    max-width: 32rem;
     margin: 0 auto;
-    padding: 0 1rem;
-    @media (min-width: 38rem) {
-      padding: 0 2rem;
-    }
+    padding: 0 2rem;
   }
 
   .top {
@@ -56,6 +53,6 @@ $$$$$$$$ |$$\$$\$$ |$$$$$$$$ |
     font-size: 0.5rem;
     padding: 0;
     line-height: 0.5rem;
-    font-weight: 700;
+    font-weight: bold;
   }
 </style>

@@ -1,6 +1,5 @@
 <script lang="ts">
   import '../app.css'
-  import '@fontsource-variable/albert-sans'
 </script>
 
 <slot />

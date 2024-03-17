@@ -2,6 +2,7 @@
   import { base } from '$app/paths'
   import ChevronLeft from '$lib/components/icons/chevron-left.svelte'
   import Card from '$lib/components/card.svelte'
+  import { dateFormat } from '$lib/time'
 
   import type { PageServerData } from './$types'
   export let data: PageServerData
@@ -21,6 +22,17 @@
   <div class="main-content">
     {@html data.post.html}
   </div>
+  {#if data.post.updated.date !== data.post.published.date}
+    <div class="updated">
+      Latest update :<date datetime={data.post.updated.date}>
+        {dateFormat(data.post.updated.date)}
+      </date>
+      <br />
+      <time datetime={data.post.updated.time}>
+        {data.post.updated.time}
+      </time>
+    </div>
+  {/if}
 </article>
 
 <style>
@@ -47,5 +59,15 @@
   .main-content {
     color: var(--text-hover);
     animation: fade 1.6s forwards;
+  }
+
+  .updated {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    animation: fade 0.8s forwards;
   }
 </style>

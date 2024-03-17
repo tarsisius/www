@@ -25,10 +25,10 @@ export default async function (slug?: string): Promise<Meta[]> {
       .replace(/\b\w/g, (match) => match.toUpperCase())
       .replaceAll('-', ' ')
 
-    const publishedDate = published![1].split('/')[0].replaceAll('-', '/')
+    const publishedDate = published![1].split('/')[0]
     const publishedTime = published![1].split('/')[1]
 
-    const updatedDate = updated![1].split('/')[0].replaceAll('-', '/')
+    const updatedDate = updated![1].split('/')[0]
     const updatedTime = updated![1].split('/')[1]
 
     const htmlData = (file as string).split(DELIMITER)[1]
@@ -77,11 +77,11 @@ export default async function (slug?: string): Promise<Meta[]> {
       .replace(/\b\w/g, (match) => match.toUpperCase())
       .replaceAll('-', ' ')
 
-    const publishedDate = published![1].split('/')[0].replaceAll('-', '/')
+    const publishedDate = published![1].split('/')[0]
     const publishedTime = published![1].split('/')[1]
 
-    const updatedDate = updated![1].split('/')[0].replaceAll('-', '/')
-    const updatedTime = updated![1].split('/')[1]
+    const updatedDate = updated ? updated[1].split('/')[0] : ''
+    const updatedTime = updated ? updated[1].split('/')[1] : ''
 
     meta.push({
       title,

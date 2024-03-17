@@ -1,22 +1,37 @@
 <script lang="ts">
-  import type { Meta } from '$lib/const'
   import { base } from '$app/paths'
   import Date from '$lib/components/icons/date.svelte'
   import Time from '$lib/components/icons/time.svelte'
+  import { dateFormat } from '$lib/time'
+  import { onMount } from 'svelte'
+  import { animate, stagger } from 'motion'
+  import SplitType from 'split-type'
 
   export let meta: Meta
   export let home: boolean
+
   $: ({ title, slug, published } = meta)
 
-  import { dateFormat } from '$lib/time'
+  let titleText: HTMLParagraphElement | HTMLAnchorElement
+  onMount(() => {
+    const splitTitle = new SplitType(titleText)
+
+    animate(
+      splitTitle.words!,
+      { y: ['-100%', '0%'], opacity: [0, 1] },
+      { delay: stagger(0.08), duration: 1, easing: [0.2, 0.8, 0.2, 1] }
+    )
+  })
 </script>
 
 <article>
   <h1 class="title">
     {#if home}
-      <a href="{base}/{slug}">{title}</a>
+      <a bind:this={titleText} href="{base}/{slug}">{title}</a>
     {:else}
-      {title}
+      <p bind:this={titleText}>
+        {title}
+      </p>
     {/if}
   </h1>
   <div class="published">
@@ -37,7 +52,6 @@
   }
 
   .title {
-    /* font-family: 'Anton', sans-serif; */
     font-family: var(--font-serif-light);
     color: var(--text-hover);
     font-size: 1.6rem;

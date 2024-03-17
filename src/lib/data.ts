@@ -1,16 +1,13 @@
 import fs from 'fs/promises'
 import path from 'node:path'
+
 import { unified } from 'unified'
 import rehypeSanitize from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
-import {
-  DELIMITER,
-  FS_CONTENT_PATH,
-  type MarkdownFiles,
-  type Meta,
-} from '$lib/const'
+
+import { DELIMITER, FS_CONTENT_PATH } from '$lib/const'
 import files from '$lib/files'
 
 export default async function (slug?: string): Promise<Meta[]> {

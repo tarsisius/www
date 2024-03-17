@@ -16,7 +16,6 @@
     OrbitControls,
     OutputPass,
     RenderPass,
-    RenderPixelatedPass,
   } from 'three/addons'
   import wkwk from '$lib/images/wkwk.webp'
 
@@ -45,10 +44,10 @@
 
     const renderer = new WebGLRenderer({
       canvas: el,
-      antialias: false,
+      antialias: true,
     })
     renderer.setClearColor(0x000000, 0)
-    renderer.setSize(100, 100)
+    renderer.setSize(80, 80)
     renderer.setPixelRatio(1)
 
     const controls = new OrbitControls(camera, renderer.domElement)
@@ -86,6 +85,6 @@
   canvas {
     animation: fade 1.5s forwards;
     margin: 0;
-    height: 100px;
+    height: 80px;
   }
 </style>

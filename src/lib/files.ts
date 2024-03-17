@@ -1,6 +1,5 @@
 import fs from 'fs/promises'
 import path from 'path'
-import type { MarkdownFiles } from '$lib/const'
 
 export default async function (
   dir: string,

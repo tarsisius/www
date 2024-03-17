@@ -3,6 +3,7 @@
   import Date from '$lib/components/icons/date.svelte'
   import Time from '$lib/components/icons/time.svelte'
   import { dateFormat } from '$lib/time'
+  import type { Meta } from '$lib/type'
   import { onMount } from 'svelte'
   import { animate, stagger } from 'motion'
   import SplitType from 'split-type'
@@ -76,6 +77,7 @@
     letter-spacing: 0.02em;
     font-size: 0.8rem;
     text-transform: uppercase;
+    animation: fade 0.8s forwards;
   }
 
   .published date {

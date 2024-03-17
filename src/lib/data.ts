@@ -7,6 +7,7 @@ import rehypeStringify from 'rehype-stringify'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 
+import type { MarkdownFiles, Meta } from '$lib/type'
 import { DELIMITER, FS_CONTENT_PATH } from '$lib/const'
 import files from '$lib/files'
 
@@ -65,7 +66,7 @@ export default async function (slug?: string): Promise<Meta[]> {
     await files(currentDir, queue, markdownFiles)
   }
 
-  let meta: Meta[] = []
+  const meta: Meta[] = []
 
   for (const [slug, file] of Object.entries(markdownFiles)) {
     const metaData = (file as string).split(DELIMITER)[0]

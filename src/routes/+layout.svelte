@@ -9,7 +9,6 @@
     --text: #9ca3af;
     --text-hover: #374151;
     --bg: #fff;
-
     --font-sans-book: '__sansBook_c41cca', '__sansBook_Fallback_c41cca',
       sans-serif;
     --font-sans-light: '__sansLight_462f7d', '__sansLight_Fallback_462f7d',

@@ -3,7 +3,7 @@
   import { base } from '$app/paths'
 
   import { dateFormat } from '$lib/time'
-  import type { Meta } from '$lib/type'
+  import type { Meta } from '$lib/markdowns/type'
 
   import { stagger, timeline } from 'motion'
   import SplitType from 'split-type'
@@ -47,12 +47,9 @@
     {/if}
   </h1>
   <div class="published">
-    <date datetime={published.date}>
-      {dateFormat(published.date)}
+    <date datetime={published}>
+      {dateFormat(published)}
     </date>
-    <time datetime={published.time}>
-      {published.time}
-    </time>
   </div>
 </article>
 
@@ -93,8 +90,7 @@
     animation: fade 0.8s forwards;
   }
 
-  .published date,
-  .published time {
+  .published date {
     display: flex;
     align-items: center;
     gap: 0.5rem;

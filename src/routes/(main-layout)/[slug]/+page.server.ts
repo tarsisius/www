@@ -1,12 +1,16 @@
 import { error } from '@sveltejs/kit'
-import getData from '$lib/data'
+import generateData from '$lib/markdowns/data'
+import generateHtml from '$lib/markdowns/parse'
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ params }) => {
-  const posts = await getData(params.slug)
-  if (posts[0]) {
+  const meta = await generateData().then(
+    (data) => data.filter((item) => item.slug === params.slug)[0]
+  )
+  if (meta) {
     return {
-      post: posts[0],
+      meta,
+      html: await generateHtml(meta.slug),
     }
   } else {
     error(404, 'Not Found')

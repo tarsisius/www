@@ -9,8 +9,8 @@
 </script>
 
 <svelte:head>
-  <title>thp. | {data.meta.title}</title>
-  <meta name="description" content={data.meta.title} />
+  <title>thp. | {data.read.meta.title}</title>
+  <meta name="description" content={data.read.meta.title} />
 </svelte:head>
 
 <article>
@@ -18,14 +18,14 @@
     <ChevronLeft size={14} />
     <a href="{base}/">back to list</a>
   </div>
-  <Card meta={data.meta} home={false} />
+  <Card meta={data.read.meta} home={false} />
   <div class="main-content">
-    {@html data.html}
+    {@html data.read.html}
   </div>
-  {#if data.meta.updated !== data.meta.published}
+  {#if data.read.meta.updated !== data.read.meta.published}
     <div class="updated">
-      Latest update :<date datetime={data.meta.updated}>
-        {dateFormat(data.meta.updated)}
+      Latest update :<date datetime={data.read.meta.updated}>
+        {dateFormat(data.read.meta.updated)}
       </date>
     </div>
   {/if}

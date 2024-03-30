@@ -3,7 +3,7 @@
   import { base } from '$app/paths'
 
   import { dateFormat } from '$lib/time'
-  import type { Meta } from '$lib/markdowns/type'
+  import type { Meta } from '$lib/type'
 
   import { stagger, timeline } from 'motion'
   import SplitType from 'split-type'
@@ -29,7 +29,7 @@
         {
           delay: stagger(0.08),
           easing: [0.2, 0.8, 0.2, 1],
-          duration: 1,
+          duration: 0.25,
         },
       ],
     ])

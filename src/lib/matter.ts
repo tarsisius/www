@@ -1,5 +1,5 @@
 import { basename, extname } from 'node:path'
-import type { Meta } from '$lib/markdowns/type'
+import type { Meta } from '$lib/type'
 
 export default async function (
   fileName: string,

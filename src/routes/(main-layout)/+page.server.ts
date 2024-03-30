@@ -1,9 +1,7 @@
 import type { PageServerLoad } from './$types'
-import generateData from '$lib/markdowns/data'
+import meta from '$lib/all'
 
 export const load: PageServerLoad = async () => {
-  const meta = await generateData()
-  return {
-    meta,
-  }
+  const data = await meta()
+  return { meta: data }
 }

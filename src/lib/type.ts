@@ -4,3 +4,8 @@ export interface Meta {
   title: string
   slug: string
 }
+
+export interface Read {
+  meta: Meta
+  html: string
+}

@@ -36,7 +36,14 @@
   })
 </script>
 
-<article>
+<article class={home ? 'flex' : ''}>
+  {#if home}
+    <div class="published">
+      <date datetime={published}>
+        {dateFormat(published)}
+      </date>
+    </div>
+  {/if}
   <h1 class="title">
     {#if home}
       <a bind:this={titleText} href="{base}/{slug}">{title}</a>
@@ -46,11 +53,13 @@
       </p>
     {/if}
   </h1>
-  <div class="published">
-    <date datetime={published}>
-      {dateFormat(published)}
-    </date>
-  </div>
+  {#if !home}
+    <div class="published">
+      <date datetime={published}>
+        {dateFormat(published)}
+      </date>
+    </div>
+  {/if}
 </article>
 
 <style>
@@ -58,12 +67,15 @@
     margin-bottom: 2.75rem;
   }
 
+  .flex {
+    display: flex;
+  }
+
   .title {
     color: var(--text-hover);
     font-size: 1.6rem;
     line-height: 2.8rem;
     margin: 0;
-    margin-bottom: 1rem;
     font-weight: bolder;
   }
 
@@ -83,7 +95,7 @@
   .published {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-right: 1rem;
     letter-spacing: 0.02em;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -94,5 +106,15 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    article {
+      flex-direction: column;
+    }
+
+    .published {
+      margin-right: 0;
+    }
   }
 </style>

@@ -1,16 +1,18 @@
 <script lang="ts">
+  import { base } from '$app/paths'
   import Loader from '$lib/components/3d/loader.svelte'
 </script>
 
 <header>
-  <Loader />
+  <a href="{base}/">
+    <Loader />
+  </a>
 </header>
 
 <style>
   header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     position: relative;
 
     max-width: 32rem;

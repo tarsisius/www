@@ -8,6 +8,10 @@ const config = {
     adapter: adapter({
       fallback: '404.html',
     }),
+    prerender: {
+      concurrency: 1,
+      crawl: true,
+    },
     paths: {
       //only if using github pages and custom domain
       //if using custom domain leave empty

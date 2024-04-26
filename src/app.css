@@ -1,44 +1,5 @@
 @font-face {
-  font-family: __sansBook_c41cca;
-  src: url('$lib/fonts/164e8acaaa52bce8-s.p.woff2') format('woff2');
+  font-family: martian_mono;
+  src: url('$lib/fonts/martian-mono.woff2') format('woff2');
   font-display: block;
-}
-
-@font-face {
-  font-family: __sansBook_Fallback_c41cca;
-  src: local('Arial');
-  ascent-override: 101.54%;
-  descent-override: 37.08%;
-  line-gap-override: 0%;
-  size-adjust: 104.09%;
-}
-
-@font-face {
-  font-family: __sansLight_462f7d;
-  src: url($lib/fonts/1ff51f015c45f835-s.p.woff2) format('woff2');
-  font-display: block;
-}
-
-@font-face {
-  font-family: __sansLight_Fallback_462f7d;
-  src: local('Arial');
-  ascent-override: 102.04%;
-  descent-override: 37.26%;
-  line-gap-override: 0%;
-  size-adjust: 103.59%;
-}
-
-@font-face {
-  font-family: '__serifLight_bac4ed';
-  src: url($lib/fonts/c745ec7e07c2ad58-s.p.woff2) format('woff2');
-  font-display: block;
-}
-
-@font-face {
-  font-family: '__serifLight_Fallback_bac4ed';
-  src: local('Arial');
-  ascent-override: 90.83%;
-  descent-override: 23.06%;
-  line-gap-override: 0%;
-  size-adjust: 105.37%;
 }

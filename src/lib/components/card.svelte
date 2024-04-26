@@ -64,7 +64,7 @@
 
 <style>
   article {
-    margin-bottom: 2.75rem;
+    margin-bottom: 1rem;
   }
 
   .flex {
@@ -73,7 +73,7 @@
 
   .title {
     color: var(--text-hover);
-    font-size: 1.6rem;
+    font-size: 1.25rem;
     line-height: 2.8rem;
     margin: 0;
     font-weight: bolder;

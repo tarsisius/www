@@ -9,21 +9,16 @@
     --text: #9ca3af;
     --text-hover: #374151;
     --bg: #fff;
-    --font-sans-book: '__sansBook_c41cca', '__sansBook_Fallback_c41cca',
-      sans-serif;
-    --font-sans-light: '__sansLight_462f7d', '__sansLight_Fallback_462f7d',
-      sans-serif;
-    --font-serif-light: '__serifLight_bac4ed', '__serifLight_Fallback_bac4ed',
-      serif;
+    --font:  "martian_mono", monospace;
   }
 
   :global(body) {
     margin: 0;
-    font-family: var(--font-sans-book);
+    font-family: var(--font);
     font-weight: 400;
     color: var(--text);
     background-color: var(--bg);
-    font-size: 12pt;
+    font-size: 10pt;
 
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
@@ -45,7 +40,7 @@
   }
 
   :global(h1, h2, h3, h4, h5) {
-    font-family: var(--font-serif-light);
+    font-family: var(--font);
   }
 
   @keyframes -global-reveal {

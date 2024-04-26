@@ -53,6 +53,7 @@
   }
 
   .main-content {
+    margin-top: 2rem;
     color: var(--text-hover);
     animation: fade 1.6s forwards;
   }

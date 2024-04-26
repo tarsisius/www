@@ -1,11 +1,11 @@
 import { join } from 'node:path'
 import { createReadStream } from 'node:fs'
 import readline from 'node:readline'
+import { matter } from '$lib/utils'
 import type { Meta } from '$lib/type'
-import matter from '$lib/matter'
 
 export default async function (): Promise<Meta[]> {
-  const modules = import.meta.glob('$lib/_posts/*.md', {
+  const modules = import.meta.glob('$lib/@contents/*.md', {
     query: 'raw',
     import: 'default',
   })
@@ -34,7 +34,7 @@ export default async function (): Promise<Meta[]> {
 
     meta.push(await matter(path, rawFrontmatter[path][1]))
   }
-  
+
   meta.sort((a, b) => {
     return new Date(b.published).getTime() - new Date(a.published).getTime()
   })

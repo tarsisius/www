@@ -36,7 +36,7 @@
   })
 </script>
 
-<article class={home ? 'flex' : ''}>
+<article>
   {#if home}
     <div class="published">
       <date datetime={published}>
@@ -64,17 +64,13 @@
 
 <style>
   article {
-    margin-bottom: 1rem;
-  }
-
-  .flex {
-    display: flex;
+    width: 100%;
+    margin-bottom: 1.8rem;
   }
 
   .title {
     color: var(--text-hover);
     font-size: 1.25rem;
-    line-height: 2.8rem;
     margin: 0;
     font-weight: bolder;
   }

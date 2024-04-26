@@ -41,6 +41,7 @@
 
   :global(h1, h2, h3, h4, h5) {
     font-family: var(--font);
+    line-height: 2rem;
   }
 
   @keyframes -global-reveal {

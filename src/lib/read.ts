@@ -1,29 +1,23 @@
-import { unified } from 'unified'
-import rehypeSanitize from 'rehype-sanitize'
-import rehypeStringify from 'rehype-stringify'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-
-import matter from '$lib/matter'
+import { getHtml, matter } from '$lib/utils'
 
 export default async function (slug: string) {
-  return await import(`$lib/_posts/${slug}.md?raw`).then(
-    async (m) => {
-      const module = m['default']
-      const rawContent = module.split('@@@')[2].trim()
-      const html = (
-        await unified()
-          .use(remarkParse)
-          .use(remarkRehype)
-          .use(rehypeSanitize)
-          .use(rehypeStringify)
-          .process(rawContent)
-      ).toString()
+  const isPage = slug === 'contact' || slug === 'about'
+  if (isPage)
+    return await import(`$lib/@contents/pages/${slug}.md?raw`).then(
+      async (m) => {
+        const module = m['default']
 
-      return {
-        meta: await matter(slug, module),
-        html,
+        return {
+          meta: await matter(slug, module),
+          html: await getHtml(module),
+        }
       }
+    )
+  return await import(`$lib/@contents/${slug}.md?raw`).then(async (m) => {
+    const module = m['default']
+    return {
+      meta: await matter(slug, module),
+      html: await getHtml(module),
     }
-  )
+  })
 }

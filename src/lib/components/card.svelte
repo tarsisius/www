@@ -72,6 +72,7 @@
     color: var(--text-hover);
     font-size: 1.25rem;
     margin: 0;
+    margin-top: 0.5rem;
     font-weight: bolder;
   }
 

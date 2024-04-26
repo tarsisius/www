@@ -6,7 +6,7 @@
   <div class="top">
     <a class="link" href={base} target="_blank">@thp</a>
     <span class="dot">.</span>
-    <a class="link" href={base} target="_blank">about</a>
+    <a class="link" href="{base}/about" target="_blank">about</a>
     <span class="dot">.</span>
     <a class="link" href={base} target="_blank">rss</a>
   </div>

@@ -37,13 +37,6 @@
 </script>
 
 <article>
-  {#if home}
-    <div class="published">
-      <date datetime={published}>
-        {dateFormat(published)}
-      </date>
-    </div>
-  {/if}
   <h1 class="title">
     {#if home}
       <a bind:this={titleText} href="{base}/{slug}">{title}</a>
@@ -53,13 +46,11 @@
       </p>
     {/if}
   </h1>
-  {#if !home}
-    <div class="published">
-      <date datetime={published}>
-        {dateFormat(published)}
-      </date>
-    </div>
-  {/if}
+  <div class="published">
+    <date datetime={published}>
+      {dateFormat(published)}
+    </date>
+  </div>
 </article>
 
 <style>
@@ -85,6 +76,7 @@
   }
 
   .title p {
+    margin-bottom: 0.5rem;
     opacity: 0;
   }
 

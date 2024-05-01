@@ -65,14 +65,13 @@
 <style>
   article {
     width: 100%;
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
   }
 
   .title {
     color: var(--text-hover);
     font-size: 1.25rem;
     margin: 0;
-    margin-top: 0.5rem;
     font-weight: bolder;
   }
 
@@ -91,18 +90,10 @@
 
   .published {
     display: flex;
-    gap: 0.5rem;
     margin-right: 1rem;
-    letter-spacing: 0.02em;
-    font-size: 0.8rem;
+    letter-spacing: 0.02rem;
     text-transform: uppercase;
     animation: fade 0.8s forwards;
-  }
-
-  .published date {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
   }
 
   @media (max-width: 768px) {

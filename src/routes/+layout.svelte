@@ -9,7 +9,7 @@
     --text: #9ca3af;
     --text-hover: #374151;
     --bg: #fff;
-    --font:  "martian_mono", monospace;
+    --font: 'martian_mono', monospace;
   }
 
   :global(body) {
@@ -26,7 +26,7 @@
 
   :global(p) {
     font-size: inherit;
-    line-height: 1.75rem;
+    line-height: 1.75;
   }
 
   :global(a) {
@@ -40,8 +40,9 @@
   }
 
   :global(h1, h2, h3, h4, h5) {
+    letter-spacing: 0.05rem;
     font-family: var(--font);
-    line-height: 2rem;
+    line-height: 2;
   }
 
   @keyframes -global-reveal {

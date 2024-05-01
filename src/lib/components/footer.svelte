@@ -4,9 +4,9 @@
 
 <div class="footer">
   <div class="top">
-    <a class="link" href={base} target="_blank">@thp</a>
+    <a class="link" href={base}>@thp</a>
     <span class="dot">.</span>
-    <a class="link" href="{base}/about" target="_blank">about</a>
+    <a class="link" href="{base}/about">about</a>
     <span class="dot">.</span>
     <a class="link" href={base} target="_blank">rss</a>
   </div>

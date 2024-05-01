@@ -18,7 +18,7 @@
     font-weight: 400;
     color: var(--text);
     background-color: var(--bg);
-    font-size: 10pt;
+    font-size: 9pt;
 
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
